@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css">
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">	
+	<script src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+    		var playing = false;
+ 
+    $('.play').click(function() {
+        
+ 
+        if (playing == false) {
+            document.getElementById('player').play();
+            playing = true;
+            
+ 
+        } else {
+            document.getElementById('player').pause();
+            playing = false;
+            
+        }
+ 
+ 
+    });
+});
+	</script>
+</head>
+<body>
+	<div class="conteiner">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="col-sm-4"></div>
+				<div class="col-sm-6">
+					<h1>...:Reproductor de musica:...</h1>
+				</div>
+			</div>
+			<div class="col-sm-5"></div>
+			<div class="col-sm-1">
+				<button style="background: none; " class="anterior"><i class="fa fa-backward ext fa-2x"  aria-hidden="true" ></i></button>
+			</div>
+			<div class="col-sm-1">
+				<button style="background: none; " class="play"><i class="fa fa-play ext fa-2x" aria-hidden="true"></i></button>
+			</div>
+			<div class="col-sm-1">
+				<button style="background: none; " class="siguiente"><i class="fa fa-forward ext fa-2x" aria-hidden="true"></i></button>
+				<audio id="player" src="musica/A$AP.mp3"> </audio>
+			</div>
+		</div>
+	</div>
+ 
+</body>
+</html>
